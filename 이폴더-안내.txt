@@ -1,0 +1,21 @@
+GitHub에 올릴 파일만 모아둔 폴더입니다.
+
+포함된 것
+- package.json, package-lock.json  (의존성 목록)
+- server.js                        (서버)
+- public/                          (웹 화면)
+- .env.example                     (환경변수 예시 — 키는 넣지 마세요)
+- .gitignore                       (node_modules, .env 제외)
+- README.md, vercel.json, render.yaml
+
+포함 안 된 것 (의도적으로 제외)
+- node_modules   → GitHub에 안 올림. clone 후 npm install
+- .env           → 비밀키. 각자 PC/배포 사이트에만 설정
+
+업로드 방법
+1. 이 폴더(Dailymarketnews-GitHub업로드용)를 GitHub Desktop으로 열거나
+2. 터미널에서 이 폴더로 이동 후:
+   git init
+   git add .
+   git commit -m "Initial commit"
+   (GitHub에 저장소 만든 뒤) git remote add origin ... 후 git push

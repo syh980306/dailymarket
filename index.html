@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dailymarketnews</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Dailymarketnews</h1>
+      <p>지수/원자재/크립토/환율/금리 + 경제뉴스</p>
+      <div class="controls">
+        <label for="marketMode">지수 모드</label>
+        <select id="marketMode">
+          <option value="realtime" selected>실시간(분봉)</option>
+          <option value="daily">일봉</option>
+        </select>
+        <label for="range">기간</label>
+        <select id="range">
+          <option value="1d">1일</option>
+          <option value="5d">5일</option>
+          <option value="1mo">1개월</option>
+          <option value="3mo">3개월</option>
+          <option value="6mo">6개월</option>
+          <option value="1y">1년</option>
+        </select>
+        <label for="autoRefresh">자동갱신(초)</label>
+        <select id="autoRefresh">
+          <option value="0">끔</option>
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="15">15</option>
+          <option value="30">30</option>
+          <option value="60">60</option>
+          <option value="120">120</option>
+          <option value="300">300</option>
+        </select>
+        <button id="refreshBtn">새로고침</button>
+      </div>
+    </header>
+
+    <section class="fear-greed">
+      <h2>공포탐욕지수</h2>
+      <div id="fgBox" class="value-box">로딩 중...</div>
+    </section>
+
+    <section>
+      <h2>시장 지표</h2>
+      <div id="cards" class="card-grid"></div>
+    </section>
+
+    <section>
+      <h2>경제뉴스 (한글 번역/요약)</h2>
+      <div class="news-grid">
+        <article>
+          <h3>미국</h3>
+          <ul id="news-us"></ul>
+        </article>
+        <article>
+          <h3>한국</h3>
+          <ul id="news-kr"></ul>
+        </article>
+        <article>
+          <h3>일본</h3>
+          <ul id="news-jp"></ul>
+        </article>
+        <article>
+          <h3>유럽</h3>
+          <ul id="news-eu"></ul>
+        </article>
+        <article>
+          <h3>중국</h3>
+          <ul id="news-cn"></ul>
+        </article>
+      </div>
+      <p id="newsWarning" class="warning"></p>
+    </section>
+
+    <section>
+      <h2>알림 상태</h2>
+      <div id="alertStatus" class="value-box">로딩 중...</div>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+  </html>
